@@ -16,7 +16,7 @@ def process_audio(conn):
     print("Client connected")
     audio_buffer = b''
     small_batch_size = 2048
-    large_batch_size = 8192
+    large_batch_size = small_batch_size + small_batch_size + small_batch_size
     with sd.RawInputStream(samplerate=48000, blocksize=small_batch_size, channels=1, dtype='int16') as stream:
         while True:
             data = conn.recv(4096)
