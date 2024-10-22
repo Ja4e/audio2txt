@@ -31,9 +31,9 @@ USER_HOME=$(eval echo ~${SUDO_USER})
 # Call the function to get the server IP address
 get_server_ip
 
-# Prompt for the RSA private key location
 echo "create one if not existing"
 
+# Prompt for the RSA private key location
 read -p "Enter the path to your RSA private key (default: $USER_HOME/.ssh/id_rsa): " RSA_KEY
 RSA_KEY=${RSA_KEY:-$USER_HOME/.ssh/id_rsa}
 
