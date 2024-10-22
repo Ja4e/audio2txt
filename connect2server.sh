@@ -52,5 +52,6 @@ echo "run this command"
 # change this if not lcoated also it somehow doesnt directly work with ssh 
 echo "cd /home/jake/audio2txt && python audio2txt.py"
 
+#um for port 5901 used for noVNC and 5905 and 5906 port for server script (coming up with better script)
 ssh -t -i $RSA_KEY -c aes256-ctr -L 5901:localhost:5901 -L 5905:localhost:5905 -L 5906:localhost:5906 jake@$SERVER_IP
 
